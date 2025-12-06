@@ -4,8 +4,8 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  // Load env file from parent directory
-  const env = loadEnv(mode, path.resolve(__dirname, '..'), '')
+  // Load env file from parent directory with VITE_ prefix
+  const env = loadEnv(mode, path.resolve(__dirname, '..'), 'VITE_')
   
   return {
     plugins: [
