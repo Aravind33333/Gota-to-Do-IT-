@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState('');
   
   // Get the env variable
-  const BASE_API = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback added
+  const BASE_API = import.meta.env.VITE_API_BASE_URL;
   
   function fetchData() {
     // Call axios.get and chain the promise handlers
